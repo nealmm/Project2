@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS dcDining_db;
+
+CREATE DATABASE dcDining_db;
