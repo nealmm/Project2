@@ -18,7 +18,11 @@ Review.init(
             // *** 1 to 5
             type: DataTypes.INTEGER
         },
-        comment: {
+        review_title: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        review_comment: {
             type: DataTypes.STRING,
             allowNull: false
         },

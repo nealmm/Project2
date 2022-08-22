@@ -2,9 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Dining extends Model {
-
-}
+class Dining extends Model {}
 
 
 // category: hamburger, pizza, seafood
@@ -30,17 +28,6 @@ Dining.init(
             type: DataTypes.STRING,
             allowNull: false
         }
-
-        // review id??
-
-        // ,
-        // user_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //       model: 'user',
-        //       key: 'id'
-        //     }
-        // }
     }
 );
 
