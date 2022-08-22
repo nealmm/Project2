@@ -3,7 +3,15 @@ const { Dining } = require('../models');
 const diningdata = [
     {
         name: 'fakeName1',
-        category: 'fakeCategory'
+        category: 'fake1Category'
+    },
+    {
+        name: 'fakeName2',
+        category: 'fake2Category'
+    },
+    {
+        name: 'fakeName3',
+        category: 'fake3Category'
     }
 ];
 
