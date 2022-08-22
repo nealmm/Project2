@@ -14,7 +14,11 @@ Review.init(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        rating: {
+            // *** 1 to 5
+            type: DataTypes.INTEGER
+        },
+        comment: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -37,7 +41,7 @@ Review.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'post'
+        modelName: 'review'
     }
 );
 

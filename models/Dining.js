@@ -7,9 +7,7 @@ class Dining extends Model {
 }
 
 
-// types: hamburger, pizza, seafood
-
-// price
+// category: hamburger, pizza, seafood
 
 // take out - true or false
 
@@ -22,13 +20,27 @@ Dining.init(
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'user',
-              key: 'id'
-            }
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
+        
+        ,
+        category: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+
+        // review id??
+
+        // ,
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'user',
+        //       key: 'id'
+        //     }
+        // }
     }
 );
 
