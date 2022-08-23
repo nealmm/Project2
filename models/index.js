@@ -9,26 +9,19 @@ User.hasMany(Review, {
     foreignKey: 'user_id'
 });
 
+// review belongs to user
 Review.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+// review belongs to dining
 Review.belongsTo(Dining, {
     foreignKey: 'dining_id'
 });
 
+// dining has many reviews
 Dining.hasMany(Review, {
     foreignKey: 'review_id'
 });
-
-// dining belongs to many users
-// Dining.belongsToMany(User, {
-//     foreignKey: 'dining_id'
-// });
-
-// dining belongs to many reviews
-// Dining.belongsToMany(Review, {
-//     foreignKey: 'dining_id'
-// });
 
 module.exports = { User, Dining, Review };
