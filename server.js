@@ -1,3 +1,5 @@
+// matt, i renamed routes folder to controllers
+
 const express = require('express');
 // const routes = require('./routes');
 const controllers = require('./controllers');
