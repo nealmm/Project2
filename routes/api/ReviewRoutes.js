@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const data = await models.Review.create(req.body);
         res.status(200).json(data);
@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
     }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const data = await models.Review.update(req.body, { where: { id: req.params.id } });
 
@@ -49,7 +49,7 @@ router.put('/:id', (req, res) => {
     }
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const data = await models.Review.destory({ where: { id: req.params.id } });
 
