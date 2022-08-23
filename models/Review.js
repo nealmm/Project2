@@ -15,7 +15,7 @@ Review.init(
             autoIncrement: true
         },
         rating: {
-            // *** 1 to 5
+            // *** star ratings
             type: DataTypes.INTEGER
         },
         review_title: {
