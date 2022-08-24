@@ -11,12 +11,14 @@ User.hasMany(Review, {
 
 // review belongs to user
 Review.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
 });
 
 // review belongs to dining
 Review.belongsTo(Dining, {
-    foreignKey: 'dining_id'
+    foreignKey: 'dining_id',
+    onDelete: 'SET NULL'
 });
 
 // dining has many reviews
