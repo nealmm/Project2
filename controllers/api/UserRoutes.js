@@ -3,7 +3,9 @@ const models = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-        const data = await models.User.findAll();
+        const data = await models.User.findAll({
+            attributes: { exclude: ['password'] }
+        });
         res.status(200).json(data);
     } catch (err) {
         res.status(500).json(err);
@@ -23,7 +25,22 @@ router.get('/:id', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+// router.get('/:username', async (req, res) => {
+//     try {
+//         const data = await models.User.findByPk(req.params.username);
+
+//         if (!data) {
+//             res.status(404).json({ message: 'Could not find user with that username' });
+//             return;
+//         }
+
+//         res.status(200).json(data);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 router.post('/', async (req, res) => {
     try {
@@ -51,7 +68,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const data = await models.User.destory({ where: { id: req.params.id } });
+        const data = await models.User.destroy({ where: { id: req.params.id } });
 
         if (!data) {
             res.status(404).json({ message: 'Could not find user with that id' });

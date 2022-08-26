@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const data = await models.Review.destory({ where: { id: req.params.id } });
+        const data = await models.Review.destroy({ where: { id: req.params.id } });
 
         if (!data) {
             res.status(404).json({ message: 'Could not find review with that id' });

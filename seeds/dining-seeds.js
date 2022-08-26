@@ -1,3 +1,4 @@
+const sequelize = require('../config/connection');
 const { Dining } = require('../models');
 
 const diningdata = [
@@ -12,9 +13,17 @@ const diningdata = [
     {
         name: 'fakeName3',
         category: 'fake3Category'
+    },
+    {
+        name: 'fakeName4',
+        category: 'fake4Category'
+    },
+    {
+        name: 'fakeName5',
+        category: 'fake5Category'
     }
 ];
 
-const seedDinings = () => Dining.bulkCreate(diningdata);
+const seedDinings = () => Dining.bulkCreate(diningdata, {individualHooks: true});
 
 module.exports = seedDinings;
