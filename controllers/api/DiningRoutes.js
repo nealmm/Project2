@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const data = await models.Dining.destory({ where: { id: req.params.id } });
+        const data = await models.Dining.destroy({ where: { id: req.params.id } });
 
         if (!data) {
             res.status(404).json({ message: 'Could not find dining with that id' });
