@@ -42,6 +42,7 @@ router.get('/:id', async (req, res) => {
 //     }
 // });
 
+// add login/singup code here or create loginRoute??
 router.post('/', async (req, res) => {
     try {
         const data = await models.User.create(req.body);
