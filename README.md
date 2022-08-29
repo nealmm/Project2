@@ -18,10 +18,18 @@ This is a forum where its users can review restaurants, simply sign up using our
 ## Contributing 
 Graham and Franco worked on the Front end while Matt and Michael worked on the Back end
 
- ## Tests
- In order to test This Application run the command line :
- Copy the code over at Git-hub and put it within your VSCode application so you can play around with it and test it.
- 
- ## Question
+## Tests
+In order to test This Application run the command line :
+Copy the code over at Git-hub and put it within your VSCode application so you can play around with it and test it.
+
+## Programs used
+Front end: Bulma, MDBootstrap, HeroTofu, GitHub, VSCode
+Back end: Express, Express-Session, Express-Handlebars, MySQL2, Sequelize, Bcrypt, Dotenv, Socket.io
+
+## Question
 My Contact :
-- Github Account :  [gsmith560, nealmm, Alenco98, tjp4ca](https://github.com/gsmith560, https://github.com/nealmm, https://github.com/Alenco98, https://github.com/tjp4ca
+- Github Account :  [gsmith560, nealmm, Alenco98, tjp4ca]
+- https://github.com/gsmith560
+- https://github.com/nealmm
+- https://github.com/Alenco98
+- https://github.com/tjp4ca
