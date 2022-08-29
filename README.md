@@ -22,9 +22,11 @@ Graham and Franco worked on the Front end while Matt and Michael worked on the B
 In order to test This Application run the command line :
 Copy the code over at Git-hub and put it within your VSCode application so you can play around with it and test it.
 
-## Programs used
-Front end: Bulma, MDBootstrap, HeroTofu, GitHub, VSCode
-Back end: Express, Express-Session, Express-Handlebars, MySQL2, Sequelize, Bcrypt, Dotenv, Socket.io
+## Programs used for front end
+Bulma, MDBootstrap, HeroTofu, GitHub, VSCode
+
+## Programs used for front end
+Express, Express-Session, Express-Handlebars, MySQL2, Sequelize, Bcrypt, Dotenv, Socket.io
 
 ## Question
 My Contact :
