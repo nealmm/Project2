@@ -13,6 +13,15 @@
       </div>
   </section>
 
+  <!-- Search field with Google Places API autocomplete -->
+  <section>
+    <div class="container">
+      <input id="search-field" class="input" placeholder="Look up restaurants" type="text">
+      <script src="/assets/js/search-field.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALRRVTnCfSVLXoktn4-shX_mEYzi39LhA&libraries=places&callback=initAutocomplete" async defer></script>
+    </div>
+  </section>
+
   <section id="about">
       <h1></h1>
       <p></p>
