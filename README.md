@@ -28,8 +28,8 @@ Bulma, MDBootstrap, HeroTofu, GitHub, VSCode
 ## Programs used for front end
 Express, Express-Session, Express-Handlebars, MySQL2, Sequelize, Bcrypt, Dotenv, Socket.io
 
-## Question
-My Contact :
+## Questions
+Our Contacts :
 - Github Account :  [gsmith560, nealmm, Alenco98, tjp4ca]
 - https://github.com/gsmith560
 - https://github.com/nealmm
