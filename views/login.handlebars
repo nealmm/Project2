@@ -1,14 +1,45 @@
-{{!-- log in page --}}
-<h1>Logged In!!!</h1>
-
 {{!-- socket --}}
 {{!-- <button id="increment">+1</button> --}}
 
-<form id="message-form">
+{{!-- <form id="message-form">
     <input name="message" placeholder="Message">
     <button>Send</button>
 </form>
 
 <script src="/socket.io/socket.io.js"></script>
-<script src="/assets/js/review.js"></script>
-{{!-- move to review page later --}}
+<script src="/assets/js/review.js"></script>  --}}
+
+
+<form class="login-form">
+    <div>
+        <label for="username-signup">Username:</label>
+        <input type="text" id="username-login" />
+    </div>
+    <div>
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" />
+    </div>
+    <div>
+        <button type="submit" id="submit-login">Log In</button>
+    </div>
+</form>
+
+<form class="signup-form">
+    <div>
+        <label for="username-signup">Username:</label>
+        <input type="text" id="username-signup" />
+    </div>
+    <div>
+        <label for="email-signup">Email:</label>
+        <input type="text" id="email-signup" />
+    </div>
+    <div>
+        <label for="password-signup">Password:</label>
+        <input type="password" id="password-signup" />
+    </div>
+    <div>
+        <button type="submit" id="submit-signup">Sign Up</button>
+    </div>
+</form>
+
+<script src="/assets/js/login.js"></script>

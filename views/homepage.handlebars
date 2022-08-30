@@ -8,8 +8,12 @@
           <img src="/assets/images/DCDines-removebg.png" alt="logo"/>
           <!--Buttons for login and signup-->
           <h1>
-              <a href="login.php" class="btn">Login</a>
-              <a href="signup.php" class="btn">Sign Up</a>
+              {{#if loggedIn}}
+              <button id="logout" class="btn-no-style">logout</button>
+              {{else}}
+              <a href="/login" class="btn">Login</a>
+              <a href="/login" class="btn">Sign Up</a>
+              {{/if}}
           </h1>
       </div>
   </section>
@@ -21,6 +25,10 @@
       <input id="search-field" class="input" placeholder="Look up restaurants" type="text">
       <script src="/assets/js/search-field.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALRRVTnCfSVLXoktn4-shX_mEYzi39LhA&libraries=places&callback=initAutocomplete" async defer></script>
+
+
+
+
     </div>
 
     <div class="container">
@@ -52,8 +60,25 @@
         </div>
       </form>
 
+
+
+
+
+
+
     </div>
   </section>
+
+
+{{!-- socket start --}}
+<script src="/socket.io/socket.io.js"></script>
+<script src="/assets/js/search-field.js"></script>
+{{!-- socket end --}}
+
+
+
+
+
 
   <section id="about">
       <h1></h1>

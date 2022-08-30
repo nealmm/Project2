@@ -55,14 +55,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     })
 // });
 
-io.on('connection', (socket) => {
+// io.on('connection', (socket) => {
+//     console.log('New WebSocket connection')
+
+//     socket.emit('message', 'Welcome')
+
+//     socket.on('sendMessage', (message) => {
+//         io.emit('message', message)
+//     })
+
+// });
+
+io.on('connection', () => {
     console.log('New WebSocket connection')
 
-    socket.emit('message', 'Welcome')
-
-    socket.on('sendMessage', (message) => {
-        io.emit('message', message)
-    })
 
 });
 

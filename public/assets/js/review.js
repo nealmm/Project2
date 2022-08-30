@@ -1,6 +1,7 @@
 // socket
 // testing socket - linked to login handlebars
-const socket = io();
+
+// const socket = io();
 
 // socket.on('countUpdated', (count) => {
 //     console.log('The count has been updated', count)
@@ -13,15 +14,15 @@ const socket = io();
 //     socket.emit('increment')
 // })
 
-socket.on('message', (message) => {
-    console.log(message)
-});
+// socket.on('message', (message) => {
+//     console.log(message)
+// });
 
-document.querySelector('#message-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+// document.querySelector('#message-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
 
-    const message = e.target.elements.message.value
+//     const message = e.target.elements.message.value
 
-    // from client to server
-    socket.emit('sendMessage', message)
-});
+//     // from client to server
+//     socket.emit('sendMessage', message)
+// });
