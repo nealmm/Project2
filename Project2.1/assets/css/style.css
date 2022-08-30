@@ -1,8 +1,5 @@
 
 * {
-
-}
-* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -30,7 +27,7 @@ h1 {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    color: #5f7cb8;
+    color: #112142;
 
 }
 
@@ -72,11 +69,12 @@ h1 {
     display: inline-block;
     padding: 10px 20px;
     color: #e5e6e8;
-    border: #f0f2f9 1px solid;
+    border: #d35460 1px solid;
     border-radius: 5px;
     margin-top: 40px;
     margin-left: 20px;
     opacity: 1.0;
+    background-color: rgb(8, 8, 8);
 
 }
 
@@ -102,8 +100,10 @@ h1 {
   }
   
 .box {
-    flex: 3;
-    background: #2d5087;
+    flex: 1;
+    background: #09244f;
+    border: #d35460 1px solid;
+    border-radius: 5px;
     color: #fff;
     border-radius: 5px;
     margin: 10px 10px;
@@ -112,7 +112,5 @@ h1 {
     text-align: center;
 }
 
-.contact-us {
-    
-}
+
 
