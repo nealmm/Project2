@@ -56,14 +56,12 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
 
-        // redirect to review page****
+        // redirect to home page to post reviews
         res.redirect('/');
         return;
     }
 
     res.render('login', { layout: 'secondary' });
 });
-
-// *** add other routes later
 
 module.exports = router;
