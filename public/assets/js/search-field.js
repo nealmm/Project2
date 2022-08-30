@@ -1,3 +1,6 @@
+// socket
+const socket = io();
+
 const searchField = document.getElementById('search-field');
 
 let autocomplete;
@@ -25,3 +28,18 @@ function onPlaceChanged() {
         console.log(place);
     }
 }
+
+
+
+// socket.on('message', (message) => {
+//     console.log(message)
+// });
+
+// document.querySelector('#message-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     const message = e.target.elements.review_comment.value
+
+//     // from client to server
+//     socket.emit('sendMessage', message)
+// });
