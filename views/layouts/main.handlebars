@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
         <title>DC Dines Underground</title>
     </head>
 
@@ -19,6 +19,66 @@
     <body>
         {{{ body }}}
     </body>
+
+    <!--Beginning of Bio and Footer Sections-->
+    <section> 
+        <!--Project Team Bio-->
+        <section>
+          <div class="container py-5 my-5 z-depth-2">
+            <div class="columns is-multiline is-justify-content-center">
+ 
+              {{#each bio}}
+                  <div class="column is-5">
+                    <div class="box p-5">
+                      <div class="columns">
+                        <div class="column is-4 mb-4 mb-0-desktop">
+                          <img class="image is-fullwidth is-cover is-rounded" style="height: 200px;" src="{{this.icon}}" alt="">
+                        </div>
+                        <div class="column is-8">
+                          <h3 class="is-size-4 has-text-weight-semibold">{{this.name}}</h3>
+                          <p class="mb-6 has-text-weight-bold">{{this.fORb}}</p>
+                          <p class="has-text-weight-bold">GitHub</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              {{/each}}
+
+          </div>  
+        </div>
+        </section>
+      <!--End of Project Team Bio Section-->
+
+        
+      <!--Beginning of Footer Section from MDbootstrap-->  
+      <footer class="bg-light has-text-centered text-white z-depth-2">
+        <div class="container p-1 pb-0">
+          <section class="mb-3">
+            <a
+            class="btn text-white btn-floating"
+            style="background-color:#55acee"
+            href="https://twitter.com/DCDinesUndrgd"
+            role="button"
+            ><i class="fab fa-twitter"></i>
+          </a>
+          <a
+            class="btn text-white btn-floating"
+            style="background-color:#333333"
+            href="https://github.com/nealmm/Project2"
+            role="button"
+            ><i class="fab fa-github"></i>
+          </a>
+          </section>
+        </div>
+        <div class="container p-1 pb-0 text-center p-3" style="background-color:#141516">
+          <a class="has-text-danger">© 2022 Copyright: DC Dines Underground</a>
+        </div>
+      </footer>
+      <!--End of Footer Section-->
+  </section>
+  <!--End of Bio and Footer Sections-->
+
+
 
 
 </html>

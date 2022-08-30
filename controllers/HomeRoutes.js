@@ -54,10 +54,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (req.session.loggedIn) {
+
+        // redirect to review page****
+        res.redirect('/');
+        return;
+    }
 
     res.render('login', { layout: 'secondary' });
 });

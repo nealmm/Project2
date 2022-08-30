@@ -6,11 +6,53 @@
       </div>
       <div class="header">
           <img src="/assets/images/DCDines-removebg.png" alt="logo"/>
+          <!--Buttons for login and signup-->
           <h1>
-              <a href="#about" class="btn">Login</a>
-              <a href="#about" class="btn">Sign Up</a>
+              <a href="login.php" class="btn">Login</a>
+              <a href="signup.php" class="btn">Sign Up</a>
           </h1>
       </div>
+  </section>
+
+  <!-- Search section -->
+  <section>
+    <div class="container">
+      <!-- Search field with Google Places API autocomplete -->
+      <input id="search-field" class="input" placeholder="Look up restaurants" type="text">
+      <script src="/assets/js/search-field.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALRRVTnCfSVLXoktn4-shX_mEYzi39LhA&libraries=places&callback=initAutocomplete" async defer></script>
+    </div>
+
+    <div class="container">
+      <!-- Review submission form -->
+      <form action="/api/review" method="POST">
+        <div class="field">
+          <label class="label" for="review-rating">Rating</label>
+          <div class="control">
+            <input class="input" id="review-rating" name="rating" type="number" min="0" max="5" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="review-title">Title</label>
+          <div class="control">
+            <input class="input" id="review-title" name="review_title" type="text" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="review-comment">Comment</label>
+          <div class="control">
+            <textarea class="textarea" id="review-comment" name="review_comment" required></textarea>
+          </div>
+        </div>
+
+        <div>
+          <input type="submit" class="button">
+        </div>
+      </form>
+
+    </div>
   </section>
 
   <section id="about">
@@ -19,31 +61,30 @@
   </section>
 
   <!--Boxes with website purpose-->
-  <section class="boxes has-text-weight-bold">
-      <div class="container">
+  <section class="boxes is-multiline has-text-weight-bold is-size-4">
+      <div class="container py-6 my-6 is-justify-content-center">
       
-      {{#each purpose}}
-      <div class="box">
-          <h2>{{this.h2}}</h2>
-          <p>
-            {{this.p}}
-          </p>
-      </div>
-      {{/each}}
+        {{#each purpose}}
+        <div class="box">
+            <h2>{{this.h2}}</h2>
+            <p>
+              {{this.p}}
+            </p>
+        </div>
+        {{/each}}
               
       </div>
   </section>
   
-  <!--Contact us form used from project1-->
+  <!--Contact-us form used from project1-->
   <section class="contact-us">
-      <div class="container py-5 my-5">
-        <h2 class="title is-2 is-capitalized">Contact DC Dines Underground</h2>
+      <div class="container py-6 my-6 is-justify-content-center">
+        <h2 class="title is-2 is-capitalized is-justify-content-center"></h2>
           <div class="columns is-justify-content-center">
             <div class="column is-5-tablet is-5-desktop is-5-widescreen is-5-fullh">
-              <form method="post"
-              action="https://public.herotofu.com/v1/5aa8ac20-fc8b-11ec-afe3-392e2c671a11" class="box p-5">
-              
-                <label class="is-block mb-4">
+              <form method="post" action="https://public.herotofu.com/v1/5aa8ac20-fc8b-11ec-afe3-392e2c671a11" class="box p-6">
+                <h2 class="font-wight-bold mb-5 is-size-3 has-text-danger is-family-code">Contact DC Dines Underground</h2>
+                <label class="is-block mb-5">
                   <span class="is-block mb-2">Your Name</span>
                   <input
                     name="name"
@@ -53,7 +94,7 @@
                   />
                 </label>
     
-                <label class="is-block mb-4">
+                <label class="is-block mb-5">
                   <span class="is block mb-2">Email Address</span>
                   <input
                     name="email"
@@ -62,8 +103,16 @@
                     placeholder="Email"
                   />
                 </label>
+
+                <label>Subject</label>
+                <select class="browser-default custom-select mb-5">
+                  <option value="" disabled>Choose Option</option>
+                  <option value="1" selected>Blog Registration</option>
+                  <option vlaue="2" selected>Report an Issue</option>
+                  <option value="3" selected>Other</option>
+                </select>
     
-                <label class="is-block mb-4">
+                <label class="is-block mb-5">
                   <span class="is-block mb-2">Message</span>
                   <textarea
                     name="message"
@@ -82,36 +131,3 @@
           </div>
         </div>  
   </section>
-
-  <!--Project Team Bio-->
-  <section>
-    <div class="columns is-multiline is-justify-content-center">
-
-      {{#each bio}}
-      <div class="column is-5">
-        <div class="box p-5">
-          <div class="columns">
-            <div class="column is-4 mb-4 mb-0-desktop">
-              <img class="image is-fullwidth is-cover is-rounded" style="height: 200px;" src="{{this.icon}}" alt="">
-            </div>
-            <div class="column is-8">
-              <h3 class="is-size-4 has-text-weight-semibold">{{this.name}}</h3>
-              <p class="mb-6 has-text-white">{{this.fORb}}</p>
-              <p class="has-text-white">GitHub</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{/each}}
-    
-  </div>
-  </section>
-
-  <!--Footer-->
-  <footer class="container">
-      <h2 class="text-movie has-text-centered">DC Dines Underground</h2>
-      <div class="text-movie has-text-centered has-text-weight-bold">
-          &copy; 2022 Group 3
-      </div>
-  </footer>
-
