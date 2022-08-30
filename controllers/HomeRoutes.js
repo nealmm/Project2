@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
                 p: 'Discover new favorite restaurants'
             }
         ]
-
+        , loggedIn: req.session.loggedIn
     });
 });
 
