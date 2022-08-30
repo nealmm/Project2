@@ -1,5 +1,6 @@
 const btnLogin = document.querySelector('.login-form');
 const btnSignup = document.querySelector('.signup-form');
+
 console.log(btnSignup)
 
 async function loginForm(e) {
@@ -29,7 +30,7 @@ async function loginForm(e) {
 
 async function signupForm(e) {
     e.preventDefault();
-    console.log('bugggggssss')
+    console.log('bug')
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();

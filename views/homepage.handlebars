@@ -9,7 +9,8 @@
           <!--Buttons for login and signup-->
           <h1>
               {{#if loggedIn}}
-              <button id="logout" class="btn-no-style">logout</button>
+              {{!-- <button id="logout" class="btn">Logout</button> --}}
+              <a href="/" id="logout" class="btn">Logout</a>
               {{else}}
               <a href="/login" class="btn">Login</a>
               <a href="/login" class="btn">Sign Up</a>
