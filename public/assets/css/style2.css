@@ -1,13 +1,11 @@
 .login-form {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    display: inline-block;
+    padding: 16px;
+    font-size: 20px;
 }
 
 .signup-form {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    display: inline-block;
+    padding: 16px;
+    font-size: 20px;
 }
 
 button {
@@ -19,47 +17,18 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 20px;
+    display: inline-block;
 }
 
 button:hover {
     opacity: 0.8;
   }
 
-input {
+  input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-@media screen and (max-width: 980px) {
-    .login-form {
-        display: inline-block;
-    }
-    
-    .signup-form {
-        display: inline-block;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .login-form {
-        display: inline-block;
-    }
-    
-    .signup-form {
-        display: inline-block;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .login-form {
-        display: inline-block;
-    }
-    
-    .signup-form {
-        display: inline-block;
-    }
-}
+  }
