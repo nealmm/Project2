@@ -1,0 +1,145 @@
+<!--Showcase section-->
+<section class="showcase">
+    <div class="video-container">
+        <video src="/assets/images/dcnightshort.mov" autoplay muted loop></video>
+    </div>
+    <div class="header">
+        <img src="/assets/images/DCDines-removebg.png" alt="logo"/>
+        <h1>
+            {{#if loggedIn}}
+            <button id="logout-button" class="btn">Logout</button>
+            <script src="/javascript/logout.js"></script>
+            {{else}}
+            <a href="/login" class="btn">Login</a>
+            <a href="/login" class="btn">Sign Up</a>
+            {{/if}}
+        </h1>
+        <div class="container">
+            <input class="input" type="text" id="search-field" placeholder="Search for local restaurants">
+            <script src="/javascript/search.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALRRVTnCfSVLXoktn4-shX_mEYzi39LhA&libraries=places&callback=initAutocomplete" async defer></script>
+        </div>
+    </div>
+</section>
+
+<!--Boxes with website purpose-->
+<section class="boxes is-multiline has-text-weight-bold is-size-4">
+    <div class="container py-6 my-6 is-justify-content-center">
+        {{#each purpose}}
+        <div class="box">
+            <h2>{{this.h2}}</h2>
+            <p>{{this.p}}</p>
+        </div>
+        {{/each}}
+      </div>
+</section>
+
+<!--Contact-us form used from project1-->
+<section class="contact-us">
+    <div class="container py-6 my-6 is-justify-content-center">
+        <h2 class="title is-2 is-capitalized is-justify-content-center"></h2>
+        <div class="columns is-justify-content-center">
+            <div class="column is-5-tablet is-5-desktop is-5-widescreen is-5-fullh">
+                <form method="post" action="https://public.herotofu.com/v1/5aa8ac20-fc8b-11ec-afe3-392e2c671a11" class="box p-6">
+                    <h2 class="font-wight-bold mb-5 is-size-3 has-text-danger is-family-code">Contact DC Dines Underground</h2>
+                    <label class="is-block mb-5">
+                        <span class="is-block mb-2">Your Name</span>
+                        <input
+                            name="name"
+                            type="text"
+                            class="input"
+                            placeholder="Name"
+                        />
+                    </label>
+
+                    <label class="is-block mb-5">
+                        <span class="is block mb-2">Email Address</span>
+                        <input
+                            name="email"
+                            type="email"
+                            class="input"
+                            placeholder="Email"
+                        />
+                    </label>
+
+                    <label>Subject</label>
+                    <select class="browser-default custom-select mb-5">
+                        <option value="" disabled>Choose Option</option>
+                        <option value="1" selected>Blog Registration</option>
+                        <option vlaue="2" selected>Report an Issue</option>
+                        <option value="3" selected>Other</option>
+                    </select>
+    
+                    <label class="is-block mb-5">
+                        <span class="is-block mb-2">Message</span>
+                        <textarea
+                            name="message"
+                            class="textarea"
+                            rows="4"
+                            placeholder="Your question for DC Dines Underground..">
+                        </textarea>
+                    </label>
+    
+                    <div class="mb-4">
+                        <button type="submit" class="button is-link px-4">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+</section>
+
+<!--Beginning of Bio and Footer Sections-->
+<section> 
+    <!--Project Team Bio-->
+    <section>
+        <div class="container py-5 my-5 z-depth-2">
+            <div class="columns is-multiline is-justify-content-center">
+                {{#each bio}}
+                <div class="column is-5">
+                    <div class="box p-5">
+                        <div class="columns">
+                            <div class="column is-4 mb-4 mb-0-desktop">
+                                <img class="image is-fullwidth is-cover is-rounded" style="height: 200px;" src="{{this.icon}}" alt="">
+                            </div>
+                            <div class="column is-8">
+                                <h3 class="is-size-4 has-text-weight-semibold">{{this.name}}</h3>
+                                <p class="mb-6 has-text-weight-bold">{{this.fORb}}</p>
+                                <p class="has-text-weight-bold">GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>  
+        </div>
+    </section>
+    <!--End of Project Team Bio Section-->
+
+    <!--Beginning of Footer Section from MDbootstrap-->  
+    <footer class="bg-light has-text-centered text-white z-depth-2">
+        <div class="container p-1 pb-0">
+            <section class="mb-3">
+                <a
+                    class="btn text-white btn-floating"
+                    style="background-color:#55acee"
+                    href="https://twitter.com/DCDinesUndrgd"
+                    role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                    class="btn text-white btn-floating"
+                    style="background-color:#333333"
+                    href="https://github.com/nealmm/Project2"
+                    role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+        </div>
+        <div class="container p-1 pb-0 text-center p-3" style="background-color:#141516">
+            <a class="has-text-danger">© 2022 Copyright: DC Dines Underground</a>
+        </div>
+    </footer>
+    <!--End of Footer Section-->
+</section>
+<!--End of Bio and Footer Sections-->

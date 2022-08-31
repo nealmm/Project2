@@ -1,0 +1,51 @@
+<section class="section">
+    <h2 class="title">Reviews for {{placeName}}</h2>
+    {{#if loggedIn}}
+    <div class="container">
+        <form id="review-form">
+            <div class="field">
+                <label class="label" for="review-rating">Rating</label>
+                <div class="control">
+                    <input class="input" type="number" id="review-rating" min="1" max="5">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="review-title">Title</label>
+                <div class="control">
+                    <input class="input" type="text" id="review-title">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="review-body">Body</label>
+                <div class="control">
+                    <textarea class="input" id="review-body"></textarea>
+                </div>
+            </div>
+            <div>
+                <button class="button is-success" type="submit">Submit review</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{/if}}
+        {{#if reviews.length}}
+        {{#each reviews}}
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <h3>{{this.title}} ({{this.rating}}/5)</h3>
+                    <p>{{this.body}}</p>
+                    <small><em>posted by <strong>{{this.user.username}}</strong> on {{format_date this.createdAt}}</em></small>
+                </div>
+            </div>
+        </article>
+        {{/each}}
+        {{else}}
+        <p>No reviews found for this restaurant</p>
+        {{/if}}
+    </div>
+</section>
+<script src="/javascript/submit-review.js"></script>

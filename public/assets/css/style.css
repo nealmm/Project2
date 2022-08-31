@@ -1,0 +1,116 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+}
+
+h1 {
+    font-weight: 50;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+}
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #112142;
+
+}
+
+.video-container {
+    position: absolute;
+    top: 5;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url(./Screen\ Shot\ 2022-08-18\ at\ 4.46.37\ PM.png) no-repeat center center/cover;
+
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    z-index: 10;
+}
+
+.header img {
+    position: center;
+    size: 750;
+      
+}
+
+.btn {
+    position: center;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #e5e6e8;
+    border: #d35460 1px solid;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 20px;
+    opacity: 1.0;
+    background-color: rgb(8, 8, 8);
+
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    
+}
+
+#about {
+    padding: 40px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.5rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.boxes .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.box {
+    flex: 1;
+    background: #09244f;
+    border: #d35460 1px solid;
+    border-radius: 5px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 10px;
+    
+    padding: 20px 20px;
+    text-align: center;
+}
+
+
+
