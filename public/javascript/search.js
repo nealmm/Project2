@@ -25,6 +25,6 @@ function onPlaceChanged() {
         let place_name = encodeURIComponent(place.name);
         let place_id = encodeURIComponent(place.place_id);
 
-        document.location.replace(`/reviews/${place_name}/${place_id}`);
+        window.location.href = `/reviews/${place_name}/${place_id}`;
     }
 }
